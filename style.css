@@ -5,32 +5,27 @@
 }
 
 :root {
-  --ff-pink:'Staatliches', sans-serif;
+  --ff-p:'Staatliches', sans-serif;
   --ff-txt:'Palanquin', sans-serif;
   --ff-txt-nl:'Roboto', sans-serif;
 
-  --bg-superior: hsl(218, 17%, 62%);
-  --bg-sc-: hsl(275, 18%, 79%);
-  --bg-center: hsl(233, 100%, 97%);
+  --bg-primary: hsl(218, 17%, 62%);
+  --bg-secundary-: hsl(275, 18%, 79%);
   --bg-menu: hsl(312, 91%, 96%);
+  --bg-center: hsl(233, 100%, 97%);
   
-
   font-size: 62.5%;
-  --fc-pinkT: hsl(232, 17%, 35%);
-  --fc-lore: hsl(274, 84%, 12%);
-
+  --fc-p: hsl(232, 17%, 35%);
+  --fc-l: hsl(274, 84%, 12%);
 }
 
 body {
   background-color: var(--bg-center);
-
 }
 
 #header-separator {
-  background-color: var(--bg-superior);
-
+  background-color: var(--bg-primary);
   animation: TopDown 700ms 400ms backwards;
-
 }
 
 #header-separator header {
@@ -43,22 +38,19 @@ body {
 }
 
 #header-separator header h1 {
-  font-family: var(--ff-pink);
-  height: 4.9rem;
-  
+  font-family: var(--ff-p);
+  font-size: 4.0rem;
   font-weight: 400;
   line-height: 3.4rem;
   letter-spacing: 0.05em;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-
-  font-size: 4.0rem;
-  color: #FFFFFF;
   
-  background-color: var(--bg-sc-);
-
+  height: 4.9rem;
   padding-bottom: 2.9rem;
   padding-top: 0.8rem;
 
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  background-color: var(--bg-secundary-);
 }
 
 main {
@@ -71,7 +63,6 @@ main {
   gap: 3.2rem;
 
   animation: TopDown 700ms 600ms backwards;
-
 }
 
 main p {
@@ -88,13 +79,11 @@ main p {
 .page img {
   width: 100%;
   height: 100%;
-  border-radius: 2rem;
-  
+  border-radius: 2rem; 
 }
 
 .menu {
   position: relative;
-  
 }
 
 .menu img {
@@ -121,10 +110,10 @@ main p {
   text-align: center;
 
   border-radius: 2rem;
-  font-family: var(--ff-pink);
+  font-family: var(--ff-p);
   font-weight: 400;
-  background: var(--bg-menu);
-  color: var(--fc-pinkT);
+  color: var(--fc-p);
+  background: var(--bg-menu); 
 }
 
 footer {
@@ -141,7 +130,6 @@ footer {
 footer a {
   text-decoration: none;
 }
-
 
 /* Animações */
 
@@ -163,7 +151,6 @@ footer a {
 
   :root {
     --fc-ft:hsl(232, 17%, 35%);
-
   }
 
   body {
@@ -179,16 +166,15 @@ footer a {
   }
 
   #header-separator header p {
-    color: #FFFFFF;
     font-family: var(--ff-txt-nl);
     font-weight: 400;
     font-size: 2.4rem;
     line-height: 2.0rem;
   
     max-width: 27.5rem;
-  
     margin: 3.2rem 4.8rem 12.5rem 5.4rem;
-  
+
+    color: #FFFFFF;
   }
 
   .page main p {
@@ -198,39 +184,36 @@ footer a {
   main {
     max-width: 1280px;
     grid-template-areas: 
-    "A B C"
-    "D B E"
-    "D F E";
+    "colA colB colC"
+    "colD colB colE"
+    "colD colF colE";
     gap: 3.2rem;
     margin-top: 6.4rem;
-    
-
   }
 
   main div:nth-child(2) {
-    grid-area: A;
-
+    grid-area: colA;
   }
   
   main div:nth-child(3) {
-    grid-area: B;
+    grid-area: colB;
   }
 
   main div:nth-child(4) {
-    grid-area: C;
+    grid-area: colC;
   }
 
   main div:nth-child(5) {
-    grid-area: D;
+    grid-area: colD;
   
   }
 
   main div:nth-child(6) {
-    grid-area: F;
+    grid-area: colF;
   }
 
   main div:nth-child(7) {
-    grid-area: E;
+    grid-area: colE;
   }
 
   .page main .menu h2 {
